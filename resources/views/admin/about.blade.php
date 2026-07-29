@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="vi">
 <head>
-    <title>About</title>
+    <meta charset="UTF-8">
+    <title>MiniShop Admin — About</title>
 </head>
-
 <body>
+    <nav>
+        <a href="{{ route('admin.dashboard') }}">Dashboard</a> |
+        <a href="{{ route('admin.categories.index') }}">Categories</a> |
+        <a href="{{ route('admin.products.index') }}">Products</a> |
+        <a href="{{ route('admin.about') }}">About</a>
+    </nav>
 
-<h1>About MiniShop</h1>
+    <h1>MiniShop Admin — About</h1>
 
-<hr>
-
-<a href="{{ route('admin.dashboard') }}">Dashboard</a> |
-<a href="{{ route('admin.categories.index') }}">Categories</a> |
-<a href="{{ route('admin.products.index') }}">Products</a> |
-<a href="{{ route('admin.about') }}">About</a>
-
-<p>
-MiniShop được xây dựng theo lộ trình MVC.
-</p>
-
-<p>
-Phiếu 06 sử dụng Laravel Routing và Controller.
-</p>
-
-<p>
-Phiếu 07 sẽ áp dụng Blade Layout.
-</p>
-
-<p>
-Phiếu 12 sẽ hoàn thiện CRUD cho Category và Product.
-</p>
-
+    <p>
+        MiniShop là project thực hành xuyên suốt môn CSE485, bắt đầu từ Front Controller
+        tự viết ở Phiếu 05, chuyển sang Laravel ở Phiếu 06 với routing và controller thật.
+        Từ Phiếu 07, các trang admin sẽ được gộp vào một Blade layout dùng chung
+        (@extends / @yield), sau đó Phiếu 08 bổ sung migration cho 2 bảng dữ liệu.
+        Cuối chuỗi, ở Phiếu 12, toàn bộ Dashboard sẽ chạy CRUD thật trên 2 bảng đó
+        thay vì các số liệu giả như hiện tại.
+    </p>
 </body>
 </html>
