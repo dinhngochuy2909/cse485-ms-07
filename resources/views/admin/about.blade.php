@@ -7,20 +7,12 @@
 <body>
     <nav>
         <a href="{{ route('admin.dashboard') }}">Dashboard</a> |
-        <a href="{{ route('admin.categories.index') }}">Categories</a> |
-        <a href="{{ route('admin.products.index') }}">Products</a> |
+        <a href="{{ route('admin.categories') }}">Categories</a> |
+        <a href="{{ route('admin.products') }}">Products</a> |
         <a href="{{ route('admin.about') }}">About</a>
     </nav>
-
-    <h1>MiniShop Admin — About</h1>
-
-    <p>
-        MiniShop là project thực hành xuyên suốt môn CSE485, bắt đầu từ Front Controller
-        tự viết ở Phiếu 05, chuyển sang Laravel ở Phiếu 06 với routing và controller thật.
-        Từ Phiếu 07, các trang admin sẽ được gộp vào một Blade layout dùng chung
-        (@extends / @yield), sau đó Phiếu 08 bổ sung migration cho 2 bảng dữ liệu.
-        Cuối chuỗi, ở Phiếu 12, toàn bộ Dashboard sẽ chạy CRUD thật trên 2 bảng đó
-        thay vì các số liệu giả như hiện tại.
-    </p>
+    <hr>
+    <h1>Giới thiệu dự án MiniShop</h1>
+    <p>MiniShop là hệ thống quản lý bán hàng đơn giản được phát triển nhằm thực hành kiến trúc MVC trong Laravel. Dự án hướng tới hoàn thiện toàn bộ các chức năng CRUD cho Danh mục và Sản phẩm cùng với việc xử lý dữ liệu tồn kho. Trong các phiên bản tới (P07–P12), hệ thống sẽ được nâng cấp giao diện chung bằng Blade Layout, xây dựng Cơ sở dữ liệu qua Migration và hoàn thiện giao diện quản trị toàn diện.</p>
 </body>
 </html>

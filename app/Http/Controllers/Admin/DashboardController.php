@@ -1,31 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    /**
-     * GET /admin — admin.dashboard
-     *
-     * P06: stats HARDCODE (CORE) — không đụng DB.
-     * Từ P11+ sẽ thay bằng Category::count(), Product::count(), SUM(price*qty).
-     */
     public function index()
     {
         $stats = [
-            'categories'       => 3,
-            'products'         => 8,
-            'inventory_value'  => 41380000,
+            'categories' => 3,
+            'products' => 8,
+            'inventory_value' => 41380000,
         ];
 
         return view('admin.dashboard', compact('stats'));
     }
 
-    /**
-     * GET /admin/about — admin.about
-     */
+    public function categories()
+    {
+        return view('admin.categories');
+    }
+
+    public function products()
+    {
+        return view('admin.products');
+    }
+
     public function about()
     {
         return view('admin.about');
